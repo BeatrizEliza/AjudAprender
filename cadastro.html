@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+
+
+    <link rel="shortcut icon" href="./assets/fav2.ico"/>
+    
+    <title>
+        Cadastrar
+    </title>
+
+</head>
+
+<body>
+    <div id="page-create-point">
+        
+            <header>
+                <h3>
+                    AjudAprender
+                    <img src="assets/logo.svg" alt="Logomarca">
+                </h3>
+    
+                <a href="index.html">
+                    <span></span>
+                    Voltar para home</a>
+            </header>
+            
+            <form action="">
+                <h1>Cadastro para ajudantes</h1>
+
+                <fieldset>
+                    <legend>
+                        <h2>
+                            Seus dados
+                        </h2>
+                    </legend>
+                    
+                    <div class="field">
+                        <label for="name">Nome do ajudante</label>
+                        <input type="text" name="name"> 
+                    </div>
+                    <div class="field">
+                        <label for="name">Sua foto</label>
+                        <input type="url" name="image" placeholder="http://">
+                    </div>
+                    <div class="field-group">
+                        <div class="field">
+                            <label for="adress">Endereço</label>
+                            <input type="text" name="adress" required>
+                        </div>
+                        <div class="field">
+                            <label for="adress">Horário disponível</label>
+                            <input type="text" name="hour" required>
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <div class="field">
+                            <label for="state">Estado</label>
+                            <select name="uf" required>
+                                <option value="">Selecione o Estado</option>
+                                
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="city">Cidade</label>
+                            <select name="city" disabled required>
+                                <option value="">Selecione a Cidade</option>
+                            </select>
+                            <input type="hidden" name="state">
+
+                        </div>
+
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        <h2>
+                            Seus pontos fortes
+                        </h2>
+                    </legend>
+                    <div class="items-grid">
+                        <li data-id="1">
+                            <img src="./assets/hum.svg" alt="Humanas">
+                            <span>Humanas</span>
+                        </li>
+
+                        <li data-id="2">
+                            <img src="./assets/mat.svg" alt="Exatas">
+                            <span>Exatas</span>
+                        </li>
+
+                        <li data-id="3">
+                            <img src="./assets/bio.svg" alt="Biológicas">
+                            <span>Biológicas</span>
+                        </li>
+
+                        <li data-id="4">
+                            <img src="./assets/tec.svg" alt="Tecnologias">
+                            <span>Tecnologias</span>
+                        </li>
+
+                        <li data-id="5">
+                            <img src="./assets/art.svg" alt="Arte">
+                            <span>Arte</span>
+                        </li>
+
+                        <li data-id="6">
+                            <img src="./assets/sport.svg" alt="Esportes">
+                            <span>Esportes</span>
+                        </li>
+                    </div>
+                    <input type="hidden" name="items">
+            
+                </fieldset>
+                <button type="submit" onclick="cadastroSucesso()" value="Exibir Alert">Cadastrar sua ajuda</button>
+            </form>
+    </div>
+    <script src="./scripts/create-point.js"></script>
+    <script>
+        function cadastroSucesso(){
+            alert("Obrigado por se cadastrar!");
+        }
+    </script>
+    </body>
+</html>
