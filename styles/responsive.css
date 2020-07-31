@@ -1,0 +1,32 @@
+@media (max-width: 870px) {
+    #page-home {
+        background-position-x: 70vw;
+    }
+    #page-home .content {
+        align-items: center;
+        text-align: center;
+    }
+    #page-home header a {
+        position: absolute;
+        bottom: 48px;
+        transform: translateX(-50%);
+
+    }
+    #page-home main {
+        align-items: center;
+    }
+    #page-search-results .cards {
+        grid-template-columns: 1fr;
+    }
+}
+@media (min-width: 1216px) {
+    #page-home {
+        background-position-x: 40vw;
+    }
+        
+}
+@media (max-height: 640px) {
+    #page-home {
+        background-position-y: 200px;
+    }
+}
